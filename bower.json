@@ -1,0 +1,23 @@
+{
+  "name": "jkphoto",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Scott <scottbot84@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sdlitwi/jkphoto-node",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.7"
+  }
+}
