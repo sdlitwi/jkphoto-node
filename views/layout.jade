@@ -1,7 +1,62 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Julia Klarman Photography
+    link(href='/vendor/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/stylesheets/business-casual.css', rel='stylesheet')
+    script(src='/vendor/modernizer/modernizr.js')
+    script(src='/vendor/jquery/dist/jquery.min.js')
+    script(src='/vendor/bootstrap/dist/js/bootstrap.min.js')
+    style.
+      #galleria {
+      width: auto;
+      height: 500px;
+      background: #000;
+      }
   body
-    block content
+    .brand
+      a(href='/')
+        img(src='/images/logo.png', alt='Julia Klarman Photography', width='360')
+    #fb-root
+    nav.navbar.navbar-default(role='navigation')
+      .container
+        .navbar-header(style='background:#000;')
+          a.navbar-brand(style='color:#fff;', href='/')
+            h5 Julia Klarman Photography
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        // Collect the nav links, forms, and other content for toggling
+        .collapse.navbar-collapse.navbar-ex1-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/') Home
+            li
+              a(href='portfolio') Portfolio
+            li
+              a(href='about') About
+            li.dropdown
+              a.dropdown-toggle(href='#', style='min-width:150px', data-toggle='dropdown')
+                | Account
+                strong.caret
+              .dropdown-menu(style='padding: 14px; padding-bottom: 10px;')
+                form(method='post', action='@Url.Action(', accept-charset='UTF-8')
+                  input#username(style='margin-bottom: 15px; color:#000;', type='text', placeholder='Username', name='username')
+                  input#password(style='margin-bottom: 15px; color:#000;', type='password', placeholder='Password', name='password')
+                  input#sign-in.btn.btn-primary.btn-block(type='submit', value='Sign In')
+        // /.navbar-collapse
+      // /.container
+    .container
+      .row
+        .box
+          .col-lg-12.text-center
+            block content
+    footer
+      .container
+        .row
+          .col-lg-12.text-center(style='color:#fff;')
+            | ©Julia Klarman Photography, all rights reserved

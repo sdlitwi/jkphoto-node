@@ -1,5 +1,31 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+      #carousel-example-generic.carousel.slide(style='max-width: 750px; margin: 0 auto')
+        // Indicators
+        ol.carousel-indicators.hidden-xs
+          li.active(data-target='#carousel-example-generic', data-slide-to='0')
+          li(data-target='#carousel-example-generic', data-slide-to='1')
+          li(data-target='#carousel-example-generic', data-slide-to='2')
+        // Wrapper for slides
+        .carousel-inner
+          .item.active
+            img.img-responsive.img-full(src='/images/3.jpg', alt='')
+          .item
+            img.img-responsive.img-full(src='/images/1.jpg', alt='')
+          .item
+            img.img-responsive.img-full(src='/images/2.jpg', alt='')
+          .item
+            img.img-responsive.img-full(src='/images/4.jpg', alt='')
+        // Controls
+        a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
+          span.icon-prev
+        a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
+          span.icon-next
+      script.
+        // Activates the Carousel
+        $(function () {
+        $('.carousel').carousel({
+        interval: 5000
+        })
+        });
