@@ -1,0 +1,25 @@
+extends layout
+block content
+  #main
+  if portfolio.albums.length > 0  
+    #gallery
+      .spacer
+      .columnp
+      each album in portfolio.albums
+        h3= album.name
+        a(href='/'+album.url)
+          img(src='/'+album.url+'?tn=1', alt= album.name, width='200')
+    .spacer
+  else if portfolio.photos.length > 0
+    script(src='/javascripts/galleria/galleria-1.3.5.min.js')
+    script.
+      Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js');
+      Galleria.configure({
+      });
+      Galleria.run('#galleria');
+    .row
+      #galleria
+        each photo in portfolio.photos
+          img(src='/' + photo.src)
+
+    

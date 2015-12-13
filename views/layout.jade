@@ -36,18 +36,9 @@ html
             li
               a(href='/') Home
             li
-              a(href='portfolio') Portfolio
+              a(href='/portfolio') Portfolio
             li
-              a(href='about') About
-            li.dropdown
-              a.dropdown-toggle(href='#', style='min-width:150px', data-toggle='dropdown')
-                | Account
-                strong.caret
-              .dropdown-menu(style='padding: 14px; padding-bottom: 10px;')
-                form(method='post', action='@Url.Action(', accept-charset='UTF-8')
-                  input#username(style='margin-bottom: 15px; color:#000;', type='text', placeholder='Username', name='username')
-                  input#password(style='margin-bottom: 15px; color:#000;', type='password', placeholder='Password', name='password')
-                  input#sign-in.btn.btn-primary.btn-block(type='submit', value='Sign In')
+              a(href='/about') About
         // /.navbar-collapse
       // /.container
     .container
